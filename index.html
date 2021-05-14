@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islam</title>
+
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0 auto;
+            font-family: cursive;
+        }
+        .counter {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+        }
+        #button {
+            padding: 1.5%;
+            background-color: rgb(245, 245, 245);
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+        h5 {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 3%;
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <div class="counter">
+        <img src="http://www.madeco-stickers.com/697-thickbox_default/sticker-islam-calligraphie-arabe.jpg" height="50%" style="margin-top: -15%;">
+        <h5 id="counter">0</h5>
+        <button id="button">Click me</button>
+    </div>
+
+
+    <script>   
+        document.querySelector("#button").addEventListener("click", () => {
+            console.log("click")
+            const element = document.querySelector("#counter")
+            let string = element.textContent
+            if (string === "1000") {
+                element.innerHTML = "Stop"
+            }
+            else if (parseInt(string) <= 1000) {
+                let int = parseInt(string)
+                console.log(int)
+                let newValue = int + 1
+                element.innerHTML = newValue
+            }
+            
+            
+        })
+    </script>
+
+</body>
+</html>
